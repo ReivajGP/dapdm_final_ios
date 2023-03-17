@@ -8,17 +8,17 @@
 import Foundation
 
 struct TicketItem: Codable {
-  var ticketNumber: String
-  var ticketStatus: Int
-  var contactName: String
-  var contactPhone: String
-  var contactPhoto: String
-  var eventDate: String
-  var eventTime: String
-  var numberOfSets: Int
-  var totalAmount: Double
-  var paidAmount: Double
-  var locationLatitude: Double
-  var locationLongitude: Double
+  var ticketNumber: String = ""
+  var ticketStatus: Int = .zero
+  var contactName: String = ""
+  var contactPhone: String = ""
+  var contactPhoto: String = ""
+  var eventDate: String = ""
+  var eventTime: String = ""
+  var numberOfSets: Int = .zero
+  var totalAmount: Double = .zero
+  var paidAmount: Double = .zero
+  var locationLatitude: Double = .zero
+  var locationLongitude: Double = .zero
   var additionalComments: String? = nil
 }

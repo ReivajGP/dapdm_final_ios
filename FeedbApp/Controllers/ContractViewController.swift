@@ -27,6 +27,10 @@ final class ContractViewController: UIViewController {
     loadUserTickets()
   }
   
+  // MARK: - Public methods
+  @IBAction func unwindToRoot(_ sender: UIStoryboardSegue) {
+  }
+  
   // MARK: - Private methods
   private func setupView() {
     setupContractCardView()
@@ -71,9 +75,8 @@ final class ContractViewController: UIViewController {
     }
   }
 
-  
   @objc private func goToNewContractFlow() {
-    print ("VAMO A ENTRAR A EL FLUJO DE CONTRATO")
+    performSegue(withIdentifier: constants.segueContractFlow, sender: self)
   }
 }
 

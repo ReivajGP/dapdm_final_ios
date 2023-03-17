@@ -23,6 +23,19 @@
 		CDC0404229C2D00600D05792 /* TicketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0404129C2D00600D05792 /* TicketItem.swift */; };
 		CDC0404729C38B5400D05792 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0404529C38B5400D05792 /* TicketTableViewCell.swift */; };
 		CDC0404829C38B5400D05792 /* TicketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC0404629C38B5400D05792 /* TicketTableViewCell.xib */; };
+		CDC0404A29C39FB800D05792 /* NewContractStepOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0404929C39FB800D05792 /* NewContractStepOneViewController.swift */; };
+		CDC0404C29C3A45900D05792 /* NewContractStepTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0404B29C3A45900D05792 /* NewContractStepTwoViewController.swift */; };
+		CDC0404E29C3A82000D05792 /* NewContractStepThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0404D29C3A82000D05792 /* NewContractStepThreeViewController.swift */; };
+		CDC0405029C3AAC300D05792 /* NewContractStepFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0404F29C3AAC300D05792 /* NewContractStepFourViewController.swift */; };
+		CDC0405229C3AD3C00D05792 /* NewContractFinalStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0405129C3AD3C00D05792 /* NewContractFinalStepViewController.swift */; };
+		CDC0405429C3D85100D05792 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0405329C3D85100D05792 /* AlertHelper.swift */; };
+		CDC0405629C3DDEC00D05792 /* AlertActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0405529C3DDEC00D05792 /* AlertActionType.swift */; };
+		CDC0405929C4CD9700D05792 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC0405829C4CD9600D05792 /* MapKit.framework */; };
+		CDC0405B29C4CDA900D05792 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC0405A29C4CDA900D05792 /* Network.framework */; };
+		CDC0405E29C4CFE500D05792 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = CDC0405D29C4CFE500D05792 /* Lottie */; };
+		CDC0406029C4D54800D05792 /* ready.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC0405F29C4D54800D05792 /* ready.json */; };
+		CDC0406329C4D8F800D05792 /* approved.json in Resources */ = {isa = PBXBuildFile; fileRef = CDC0406229C4D8F800D05792 /* approved.json */; };
+		CDC0406529C4F9BE00D05792 /* DataPersistanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0406429C4F9BE00D05792 /* DataPersistanceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +57,18 @@
 		CDC0404129C2D00600D05792 /* TicketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketItem.swift; sourceTree = "<group>"; };
 		CDC0404529C38B5400D05792 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		CDC0404629C38B5400D05792 /* TicketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketTableViewCell.xib; sourceTree = "<group>"; };
+		CDC0404929C39FB800D05792 /* NewContractStepOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContractStepOneViewController.swift; sourceTree = "<group>"; };
+		CDC0404B29C3A45900D05792 /* NewContractStepTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContractStepTwoViewController.swift; sourceTree = "<group>"; };
+		CDC0404D29C3A82000D05792 /* NewContractStepThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContractStepThreeViewController.swift; sourceTree = "<group>"; };
+		CDC0404F29C3AAC300D05792 /* NewContractStepFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContractStepFourViewController.swift; sourceTree = "<group>"; };
+		CDC0405129C3AD3C00D05792 /* NewContractFinalStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContractFinalStepViewController.swift; sourceTree = "<group>"; };
+		CDC0405329C3D85100D05792 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		CDC0405529C3DDEC00D05792 /* AlertActionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionType.swift; sourceTree = "<group>"; };
+		CDC0405829C4CD9600D05792 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CDC0405A29C4CDA900D05792 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		CDC0405F29C4D54800D05792 /* ready.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ready.json; sourceTree = "<group>"; };
+		CDC0406229C4D8F800D05792 /* approved.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = approved.json; sourceTree = "<group>"; };
+		CDC0406429C4F9BE00D05792 /* DataPersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistanceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC0405929C4CD9700D05792 /* MapKit.framework in Frameworks */,
+				CDC0405B29C4CDA900D05792 /* Network.framework in Frameworks */,
+				CDC0405E29C4CFE500D05792 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +90,7 @@
 			children = (
 				CDC0401629C2036000D05792 /* FeedbApp */,
 				CDC0401529C2036000D05792 /* Products */,
+				CDC0405729C4CD9600D05792 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC0401729C2036000D05792 /* AppDelegate.swift */,
+				CDC0406129C4D54D00D05792 /* Animations */,
 				CDC0401929C2036000D05792 /* SceneDelegate.swift */,
 				CDC0404029C28D8700D05792 /* Helpers */,
 				CDC0403429C2417C00D05792 /* Utils */,
@@ -93,6 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				CDC0401B29C2036000D05792 /* HomeViewController.swift */,
+				CDC0404929C39FB800D05792 /* NewContractStepOneViewController.swift */,
+				CDC0404B29C3A45900D05792 /* NewContractStepTwoViewController.swift */,
+				CDC0404D29C3A82000D05792 /* NewContractStepThreeViewController.swift */,
+				CDC0404F29C3AAC300D05792 /* NewContractStepFourViewController.swift */,
+				CDC0405129C3AD3C00D05792 /* NewContractFinalStepViewController.swift */,
 				CDC0402C29C23D8800D05792 /* ContractViewController.swift */,
 				CDC0402E29C23D9F00D05792 /* CalendarViewController.swift */,
 				CDC0403029C23DC500D05792 /* ProfileViewController.swift */,
@@ -104,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				CDC0403229C2417800D05792 /* AppConstants.swift */,
+				CDC0405529C3DDEC00D05792 /* AlertActionType.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -141,8 +177,28 @@
 			isa = PBXGroup;
 			children = (
 				CDC0403E29C2887E00D05792 /* ImageDownloaderHelper.swift */,
+				CDC0405329C3D85100D05792 /* AlertHelper.swift */,
+				CDC0406429C4F9BE00D05792 /* DataPersistanceHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CDC0405729C4CD9600D05792 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CDC0405A29C4CDA900D05792 /* Network.framework */,
+				CDC0405829C4CD9600D05792 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDC0406129C4D54D00D05792 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				CDC0405F29C4D54800D05792 /* ready.json */,
+				CDC0406229C4D8F800D05792 /* approved.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +217,9 @@
 			dependencies = (
 			);
 			name = FeedbApp;
+			packageProductDependencies = (
+				CDC0405D29C4CFE500D05792 /* Lottie */,
+			);
 			productName = FeedbApp;
 			productReference = CDC0401429C2036000D05792 /* FeedbApp.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +248,9 @@
 				Base,
 			);
 			mainGroup = CDC0400B29C2036000D05792;
+			packageReferences = (
+				CDC0405C29C4CFE500D05792 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = CDC0401529C2036000D05792 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,9 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC0406029C4D54800D05792 /* ready.json in Resources */,
 				CDC0402429C2036200D05792 /* LaunchScreen.storyboard in Resources */,
 				CDC0402129C2036200D05792 /* Assets.xcassets in Resources */,
 				CDC0401F29C2036000D05792 /* Main.storyboard in Resources */,
+				CDC0406329C4D8F800D05792 /* approved.json in Resources */,
 				CDC0404829C38B5400D05792 /* TicketTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,15 +282,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC0403129C23DC500D05792 /* ProfileViewController.swift in Sources */,
+				CDC0405029C3AAC300D05792 /* NewContractStepFourViewController.swift in Sources */,
 				CDC0402F29C23D9F00D05792 /* CalendarViewController.swift in Sources */,
+				CDC0404E29C3A82000D05792 /* NewContractStepThreeViewController.swift in Sources */,
+				CDC0404A29C39FB800D05792 /* NewContractStepOneViewController.swift in Sources */,
 				CDC0404229C2D00600D05792 /* TicketItem.swift in Sources */,
+				CDC0405429C3D85100D05792 /* AlertHelper.swift in Sources */,
+				CDC0404C29C3A45900D05792 /* NewContractStepTwoViewController.swift in Sources */,
 				CDC0404729C38B5400D05792 /* TicketTableViewCell.swift in Sources */,
 				CDC0402D29C23D8800D05792 /* ContractViewController.swift in Sources */,
 				CDC0403729C24D7400D05792 /* CalendarTableViewCell.swift in Sources */,
+				CDC0405629C3DDEC00D05792 /* AlertActionType.swift in Sources */,
 				CDC0403C29C2557C00D05792 /* CalendarItem.swift in Sources */,
 				CDC0401C29C2036000D05792 /* HomeViewController.swift in Sources */,
 				CDC0403329C2417800D05792 /* AppConstants.swift in Sources */,
 				CDC0401829C2036000D05792 /* AppDelegate.swift in Sources */,
+				CDC0405229C3AD3C00D05792 /* NewContractFinalStepViewController.swift in Sources */,
+				CDC0406529C4F9BE00D05792 /* DataPersistanceHelper.swift in Sources */,
 				CDC0401A29C2036000D05792 /* SceneDelegate.swift in Sources */,
 				CDC0403F29C2887E00D05792 /* ImageDownloaderHelper.swift in Sources */,
 			);
@@ -460,6 +532,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDC0405C29C4CFE500D05792 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDC0405D29C4CFE500D05792 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDC0405C29C4CFE500D05792 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDC0400C29C2036000D05792 /* Project object */;
 }
