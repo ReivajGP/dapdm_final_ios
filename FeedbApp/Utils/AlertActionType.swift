@@ -10,4 +10,5 @@ import Foundation
 enum AlertActionType {
   case ok
   case cancel
+  case notForNow
 }

@@ -15,12 +15,14 @@ final class NewContractFinalStepViewController: UIViewController {
   let constants: AppConstants = AppConstants()
   
   // MARK: - IBOutlets
-  @IBOutlet weak var animationContainer: UIView!
+  @IBOutlet private weak var animationContainer: UIView!
+  @IBOutlet private weak var nextStepsTextView: UITextView!
   
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
     print(finalStepTicket)
+    setupView()
     launchAnimation()
   }
   
@@ -31,6 +33,23 @@ final class NewContractFinalStepViewController: UIViewController {
     }
   }
   // MARK: - Private methods
+  private func setupView() {
+    setupTextView()
+    launchAnimation()
+  }
+  
+  private func setupTextView() {
+    let textViewStyle = NSMutableParagraphStyle()
+    textViewStyle.lineSpacing = -5
+    textViewStyle.alignment = .center
+    let attributes = [NSAttributedString.Key.paragraphStyle : textViewStyle,
+                      NSAttributedString.Key.font: UIFont(name: "Hiragino Sans", size: 18.0) ?? UIFont()]
+    nextStepsTextView.attributedText = NSAttributedString(
+      string: constants.newContractNextStepInstructions,
+      attributes: attributes
+    )
+  }
+  
   private func launchAnimation() {
     let animationView: LottieAnimationView = LottieAnimationView(name: constants.animationApprovedName)
     animationView.frame = animationContainer.frame

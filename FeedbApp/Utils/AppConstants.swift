@@ -31,15 +31,25 @@ struct AppConstants {
   var newContractThirdToFourthStepSegue: String { "new_contract_three_to_four" }
   var newContractToFinalStepSegue: String { "new_contract_to_final" }
   
-  // MARK: - Calendar screen
-  var calendarCellReusableID: String { "calendarCellReusableID" }
- 
   // MARK: - Alerts
-  var genericAlertTitle: String { "¡Oops!" }
+  var genericIssueAlertTitle: String { "¡Oops!" }
+  var genericSuccessfulAlertTitle: String { "¡Genial!" }
   var genericOkActionTitle: String { "Muy bien" }
+  var notForNowActionTitle: String { "No por ahora"}
   var emptyFieldsAlertMessage: String { "Asegúrate de que todos los campos estén llenos antes de continuar" }
+  var successfulSignInAlertTitle: String { "¡Registro exitoso!" }
+  var successfulSignInAlertMessage: String { "Ahora ya puedes realizar el inicio de sesión con tu correo y contraseña que introdujiste"}
+  var successfulLogInAlertTitle: String { "¡Sesión iniciada!" }
+  var successfulLogInAlertMessage: String { "Ahora ya puedes acceder a todo el contenido en la parte de contrataciones. ¿Quieres ir ahí?"}
+  var emptyEmailFieldAlertMessage: String { "Introduce el correo electrónico de la cuenta que quieres recuperar" }
+  var successfullySentRecoveryMailAlertMessage: String { "Se ha enviado un correo de recuperación para tu contraseña olvidada" }
+  var takeMeThereActionTitle: String { "¡Vamos!" }
+  var LogInActionTitle: String { "Iniciar sesión" }
+  var unableLoadContentUnlessLogedInAlertMessage: String { "Para poder acceder al contenido completo de este apartado debes iniciar sesión." }
+  var successfullyLogedOutAlertMessage: String { "Sesión cerrada exitosamente" }
   
   // MARK: - Calendar
+  var calendarCellReusableID: String { "calendarCellReusableID" }
   var januaryNumber: Int { 1 }
   var februaryNumber: Int { 2 }
   var marchNumber: Int { 3 }
@@ -83,4 +93,20 @@ struct AppConstants {
   var animationReadyName: String { "ready" }
   var animationApprovedName: String { "approved" }
   var defaultAnimationSpeed: CGFloat { 1.0 }
+  var contractsTabBarControllerIndex: Int { 2 }
+  var profileTabBarControllerIndex: Int { 3 }
+  
+  // MARK: - Long strings
+  var newContractNextStepInstructions: String {
+"""
+¡Hemos recibido tu solicitud!
+            
+A partir de ahora tendrás 3 días para realizar la transferencia de apartado para que tu evento quede formalmente agendado. Esto lo podrás hacer accediendo al ticket generado en el apartado de contrataciones.
+Una vez que recibamos la notificación de transferencia, en tu ticket aparecerá el sello de confirmado.
+       
+¡Agradecemos mucho tu preferencia, nos vemos en el show!
+🎸🥁🎤
+             
+"""
+  }
 }

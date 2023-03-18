@@ -21,7 +21,7 @@ final class AlertHelper {
     let alertAction: UIAlertAction = UIAlertAction(title: action1Title, style: .default) { _ in completion (.ok) }
     alert.addAction(alertAction)
     if let action2Title {
-      let alertAction2: UIAlertAction = UIAlertAction(title: action2Title, style: .default)
+      let alertAction2: UIAlertAction = UIAlertAction(title: action2Title, style: .default) { _ in completion (.notForNow)}
       alert.addAction(alertAction2)
     }
     controller.present(alert, animated: true)

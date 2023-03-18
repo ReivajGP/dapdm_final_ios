@@ -15,7 +15,6 @@ final class HomeViewController: UIViewController {
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
   }
 
   // MARK: - IBAction methods
@@ -33,6 +32,5 @@ final class HomeViewController: UIViewController {
   private func setupView() {
     
   }
-  
 }
 

@@ -25,7 +25,7 @@ final class NewContractStepOneViewController: UIViewController {
       goToSecondStep()
     } else {
       AlertHelper().showAlert(
-        title: constants.genericAlertTitle,
+        title: constants.genericIssueAlertTitle,
         message: constants.emptyFieldsAlertMessage,
         action1Title: constants.genericOkActionTitle,
         controller: self
