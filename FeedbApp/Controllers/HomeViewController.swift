@@ -7,14 +7,18 @@
 
 import UIKit
 
-final class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController, UINavigationBarDelegate {
 
   // MARK: - Properties
-
-
+  private let constants: AppConstants = AppConstants()
+  
+  // MARK: - IBOutlets
+  @IBOutlet private weak var navigationBar: UINavigationBar!
+  
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupView()
   }
 
   // MARK: - IBAction methods
@@ -27,10 +31,12 @@ final class HomeViewController: UIViewController {
   @objc private func openFacebook(_ sender: UIButton) {
   }
   
+  @IBAction func showMenu(_ sender: UIBarButtonItem) {
+  }
   
   // MARK: - Private methods
   private func setupView() {
-    
+    NavigationBarHelper().setupView(for: navigationBar)
   }
 }
 

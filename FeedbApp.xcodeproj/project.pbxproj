@@ -39,6 +39,7 @@
 		CDC0406729C523BF00D05792 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDC0406629C523BF00D05792 /* GoogleService-Info.plist */; };
 		CDC0406A29C529F900D05792 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDC0406929C529F900D05792 /* FirebaseAuth */; };
 		CDC0406C29C529F900D05792 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CDC0406B29C529F900D05792 /* FirebaseFirestore */; };
+		CDC0406E29C65D9E00D05792 /* NavigationBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0406D29C65D9E00D05792 /* NavigationBarHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		CDC0406229C4D8F800D05792 /* approved.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = approved.json; sourceTree = "<group>"; };
 		CDC0406429C4F9BE00D05792 /* DataPersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistanceHelper.swift; sourceTree = "<group>"; };
 		CDC0406629C523BF00D05792 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CDC0406D29C65D9E00D05792 /* NavigationBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,14 +131,14 @@
 		CDC0402B29C23D6F00D05792 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CDC0401B29C2036000D05792 /* HomeViewController.swift */,
 				CDC0404929C39FB800D05792 /* NewContractStepOneViewController.swift */,
 				CDC0404B29C3A45900D05792 /* NewContractStepTwoViewController.swift */,
 				CDC0404D29C3A82000D05792 /* NewContractStepThreeViewController.swift */,
 				CDC0404F29C3AAC300D05792 /* NewContractStepFourViewController.swift */,
 				CDC0405129C3AD3C00D05792 /* NewContractFinalStepViewController.swift */,
-				CDC0402C29C23D8800D05792 /* ContractViewController.swift */,
+				CDC0401B29C2036000D05792 /* HomeViewController.swift */,
 				CDC0402E29C23D9F00D05792 /* CalendarViewController.swift */,
+				CDC0402C29C23D8800D05792 /* ContractViewController.swift */,
 				CDC0403029C23DC500D05792 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
@@ -185,6 +187,7 @@
 			children = (
 				CDC0403E29C2887E00D05792 /* ImageDownloaderHelper.swift */,
 				CDC0405329C3D85100D05792 /* AlertHelper.swift */,
+				CDC0406D29C65D9E00D05792 /* NavigationBarHelper.swift */,
 				CDC0406429C4F9BE00D05792 /* DataPersistanceHelper.swift */,
 			);
 			path = Helpers;
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDC0403129C23DC500D05792 /* ProfileViewController.swift in Sources */,
+				CDC0406E29C65D9E00D05792 /* NavigationBarHelper.swift in Sources */,
 				CDC0405029C3AAC300D05792 /* NewContractStepFourViewController.swift in Sources */,
 				CDC0402F29C23D9F00D05792 /* CalendarViewController.swift in Sources */,
 				CDC0404E29C3A82000D05792 /* NewContractStepThreeViewController.swift in Sources */,

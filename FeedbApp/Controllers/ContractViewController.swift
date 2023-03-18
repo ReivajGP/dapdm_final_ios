@@ -18,6 +18,7 @@ final class ContractViewController: UIViewController {
   @IBOutlet private weak var newContractView: UIView!
   @IBOutlet private weak var ticketsTableView: UITableView!
   @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet private weak var navigationBar: UINavigationBar!
   
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
@@ -39,6 +40,7 @@ final class ContractViewController: UIViewController {
   
   // MARK: - Private methods
   private func setupView() {
+    NavigationBarHelper().setupView(for: navigationBar)
     stopActivityIndicator()
     setupContractCardView()
   }
@@ -101,6 +103,10 @@ final class ContractViewController: UIViewController {
   
   @objc private func goToNewContractFlow() {
     performSegue(withIdentifier: constants.segueContractFlow, sender: self)
+  }
+  
+  // MARK: - IBAction methods
+  @IBAction func showMenu(_ sender: UIBarButtonItem) {
   }
 }
 

@@ -19,9 +19,11 @@ final class CalendarViewController: UIViewController {
   // MARK: - IBOutlets
   @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet private weak var eventsTableView: UITableView!
+  @IBOutlet private weak var navigationBar: UINavigationBar!
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    NavigationBarHelper().setupView(for: navigationBar)
     imageDownloaderHelper.delegate = self
     requestCalendarEvents()
   }
@@ -60,6 +62,10 @@ final class CalendarViewController: UIViewController {
     cell.eventTitle.text = events[indexPath.row].title
     cell.eventDescription.text = events[indexPath.row].description
     cell.eventSchedule.text = events[indexPath.row].schedule
+  }
+  
+  
+  @IBAction func showMenu(_ sender: UIBarButtonItem) {
   }
 }
 

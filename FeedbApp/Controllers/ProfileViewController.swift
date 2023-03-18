@@ -17,10 +17,12 @@ final class ProfileViewController: UIViewController {
   @IBOutlet private weak var mailTextField: UITextField!
   @IBOutlet private weak var passTextField: UITextField!
   @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
+  @IBOutlet private weak var navigationBar: UINavigationBar!
   
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
+    NavigationBarHelper().setupView(for: navigationBar)
     stopActivityIndicator()
   }
   
@@ -195,5 +197,9 @@ final class ProfileViewController: UIViewController {
       try Auth.auth().signOut()
       successfullyLogedOutAlert()
     } catch { }
+  }
+  
+  
+  @IBAction func showMenu(_ sender: UIBarButtonItem) {
   }
 }
