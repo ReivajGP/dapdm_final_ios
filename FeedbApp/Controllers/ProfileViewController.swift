@@ -200,6 +200,6 @@ final class ProfileViewController: UIViewController {
   }
   
   
-  @IBAction func showMenu(_ sender: UIBarButtonItem) {
+  @IBAction func showSlideMenu(_ sender: UIBarButtonItem) {
   }
 }

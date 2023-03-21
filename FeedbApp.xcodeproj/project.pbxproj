@@ -40,6 +40,9 @@
 		CDC0406A29C529F900D05792 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CDC0406929C529F900D05792 /* FirebaseAuth */; };
 		CDC0406C29C529F900D05792 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CDC0406B29C529F900D05792 /* FirebaseFirestore */; };
 		CDC0406E29C65D9E00D05792 /* NavigationBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0406D29C65D9E00D05792 /* NavigationBarHelper.swift */; };
+		CDC0407029C8C22400D05792 /* MenuBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0406F29C8C22400D05792 /* MenuBackgroundViewController.swift */; };
+		CDC0407229C8C27100D05792 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */; };
+		CDC0407429C8CD6E00D05792 /* SlideMenuBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		CDC0406429C4F9BE00D05792 /* DataPersistanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistanceHelper.swift; sourceTree = "<group>"; };
 		CDC0406629C523BF00D05792 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDC0406D29C65D9E00D05792 /* NavigationBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarHelper.swift; sourceTree = "<group>"; };
+		CDC0406F29C8C22400D05792 /* MenuBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackgroundViewController.swift; sourceTree = "<group>"; };
+		CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
+		CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 		CDC0402B29C23D6F00D05792 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CDC0406F29C8C22400D05792 /* MenuBackgroundViewController.swift */,
 				CDC0404929C39FB800D05792 /* NewContractStepOneViewController.swift */,
 				CDC0404B29C3A45900D05792 /* NewContractStepTwoViewController.swift */,
 				CDC0404D29C3A82000D05792 /* NewContractStepThreeViewController.swift */,
@@ -140,6 +147,8 @@
 				CDC0402E29C23D9F00D05792 /* CalendarViewController.swift */,
 				CDC0402C29C23D8800D05792 /* ContractViewController.swift */,
 				CDC0403029C23DC500D05792 /* ProfileViewController.swift */,
+				CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */,
+				CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,6 +308,7 @@
 				CDC0406E29C65D9E00D05792 /* NavigationBarHelper.swift in Sources */,
 				CDC0405029C3AAC300D05792 /* NewContractStepFourViewController.swift in Sources */,
 				CDC0402F29C23D9F00D05792 /* CalendarViewController.swift in Sources */,
+				CDC0407429C8CD6E00D05792 /* SlideMenuBaseViewController.swift in Sources */,
 				CDC0404E29C3A82000D05792 /* NewContractStepThreeViewController.swift in Sources */,
 				CDC0404A29C39FB800D05792 /* NewContractStepOneViewController.swift in Sources */,
 				CDC0404229C2D00600D05792 /* TicketItem.swift in Sources */,
@@ -306,8 +316,10 @@
 				CDC0404C29C3A45900D05792 /* NewContractStepTwoViewController.swift in Sources */,
 				CDC0404729C38B5400D05792 /* TicketTableViewCell.swift in Sources */,
 				CDC0402D29C23D8800D05792 /* ContractViewController.swift in Sources */,
+				CDC0407029C8C22400D05792 /* MenuBackgroundViewController.swift in Sources */,
 				CDC0403729C24D7400D05792 /* CalendarTableViewCell.swift in Sources */,
 				CDC0405629C3DDEC00D05792 /* AlertActionType.swift in Sources */,
+				CDC0407229C8C27100D05792 /* SlideMenuViewController.swift in Sources */,
 				CDC0403C29C2557C00D05792 /* CalendarItem.swift in Sources */,
 				CDC0401C29C2036000D05792 /* HomeViewController.swift in Sources */,
 				CDC0403329C2417800D05792 /* AppConstants.swift in Sources */,
