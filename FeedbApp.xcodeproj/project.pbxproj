@@ -43,6 +43,7 @@
 		CDC0407029C8C22400D05792 /* MenuBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0406F29C8C22400D05792 /* MenuBackgroundViewController.swift */; };
 		CDC0407229C8C27100D05792 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */; };
 		CDC0407429C8CD6E00D05792 /* SlideMenuBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */; };
+		CDE3310F29CABA0F003CDBC6 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3310E29CABA0F003CDBC6 /* IntroductionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		CDC0406F29C8C22400D05792 /* MenuBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackgroundViewController.swift; sourceTree = "<group>"; };
 		CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 		CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuBaseViewController.swift; sourceTree = "<group>"; };
+		CDE3310E29CABA0F003CDBC6 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				CDC0403029C23DC500D05792 /* ProfileViewController.swift */,
 				CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */,
 				CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */,
+				CDE3310E29CABA0F003CDBC6 /* IntroductionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				CDC0403329C2417800D05792 /* AppConstants.swift in Sources */,
 				CDC0401829C2036000D05792 /* AppDelegate.swift in Sources */,
 				CDC0405229C3AD3C00D05792 /* NewContractFinalStepViewController.swift in Sources */,
+				CDE3310F29CABA0F003CDBC6 /* IntroductionViewController.swift in Sources */,
 				CDC0406529C4F9BE00D05792 /* DataPersistanceHelper.swift in Sources */,
 				CDC0401A29C2036000D05792 /* SceneDelegate.swift in Sources */,
 				CDC0403F29C2887E00D05792 /* ImageDownloaderHelper.swift in Sources */,
