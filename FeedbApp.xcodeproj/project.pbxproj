@@ -44,6 +44,7 @@
 		CDC0407229C8C27100D05792 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */; };
 		CDC0407429C8CD6E00D05792 /* SlideMenuBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */; };
 		CDE3310F29CABA0F003CDBC6 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3310E29CABA0F003CDBC6 /* IntroductionViewController.swift */; };
+		CDE3311129CACA27003CDBC6 /* TicketSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE3311029CACA27003CDBC6 /* TicketSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 		CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideMenuBaseViewController.swift; sourceTree = "<group>"; };
 		CDE3310E29CABA0F003CDBC6 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		CDE3311029CACA27003CDBC6 /* TicketSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketSummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				CDC0407329C8CD6E00D05792 /* SlideMenuBaseViewController.swift */,
 				CDC0407129C8C27100D05792 /* SlideMenuViewController.swift */,
 				CDE3310E29CABA0F003CDBC6 /* IntroductionViewController.swift */,
+				CDE3311029CACA27003CDBC6 /* TicketSummaryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				CDC0404A29C39FB800D05792 /* NewContractStepOneViewController.swift in Sources */,
 				CDC0404229C2D00600D05792 /* TicketItem.swift in Sources */,
 				CDC0405429C3D85100D05792 /* AlertHelper.swift in Sources */,
+				CDE3311129CACA27003CDBC6 /* TicketSummaryViewController.swift in Sources */,
 				CDC0404C29C3A45900D05792 /* NewContractStepTwoViewController.swift in Sources */,
 				CDC0404729C38B5400D05792 /* TicketTableViewCell.swift in Sources */,
 				CDC0402D29C23D8800D05792 /* ContractViewController.swift in Sources */,
