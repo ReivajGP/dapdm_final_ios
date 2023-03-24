@@ -375,9 +375,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="9ia-iI-j2M"/>
                     <connections>
+                        <outlet property="facebookImageView" destination="AdI-EM-oXT" id="UnD-Q4-P3t"/>
+                        <outlet property="instagramImageView" destination="sVc-x1-5OR" id="4Kp-KG-hBQ"/>
                         <outlet property="leadingSlideViewConstraint" destination="4id-G0-xbX" id="ppD-ut-lEa"/>
                         <outlet property="navigationBar" destination="MSd-bs-07F" id="ACF-YQ-Des"/>
                         <outlet property="slideMenuContainer" destination="Gak-fV-bOc" id="0qb-Hj-4gG"/>
+                        <outlet property="youtubeImageView" destination="qwm-9f-vio" id="Wfw-ur-Wfv"/>
                         <segue destination="Mw5-55-gNA" kind="show" id="qhK-ze-23g"/>
                     </connections>
                 </viewController>
@@ -1447,14 +1450,14 @@
             <objects>
                 <viewController storyboardIdentifier="SlideMenuViewController" id="Mw5-55-gNA" customClass="SlideMenuViewController" customModule="FeedbApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gvJ-PM-nFk">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3j-mR-v3Z" userLabel="Header container view">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yyp-oQ-81g">
-                                        <rect key="frame" x="30" y="27" width="50" height="46.666666666666671"/>
+                                        <rect key="frame" x="30" y="26.5" width="50" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="4ds-Qp-EJ0"/>
                                             <constraint firstAttribute="width" constant="50" id="oqr-QE-0FI"/>
@@ -1485,7 +1488,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zi-KK-gtk">
-                                <rect key="frame" x="10" y="110" width="190" height="35"/>
+                                <rect key="frame" x="10" y="110" width="260" height="35"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Presentación"/>
@@ -1494,7 +1497,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yv4-UV-YhE">
-                                <rect key="frame" x="10" y="155" width="190" height="35"/>
+                                <rect key="frame" x="10" y="155" width="260" height="35"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Comentarios"/>
@@ -1525,7 +1528,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="h53-Ib-Hx1"/>
+        <segue reference="qhK-ze-23g"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>

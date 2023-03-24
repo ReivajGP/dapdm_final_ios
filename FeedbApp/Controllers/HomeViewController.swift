@@ -28,6 +28,9 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
   @IBOutlet private weak var navigationBar: UINavigationBar!
   @IBOutlet private weak var leadingSlideViewConstraint: NSLayoutConstraint!
   @IBOutlet private weak var slideMenuContainer: UIView!
+  @IBOutlet private weak var youtubeImageView: UIImageView!
+  @IBOutlet private weak var instagramImageView: UIImageView!
+  @IBOutlet private weak var facebookImageView: UIImageView!
   
   // MARK: - Lifecycle methods
   override func viewDidLoad() {
@@ -37,15 +40,6 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
   }
   
   // MARK: - IBAction methods
-  @objc private func openYoutube(_ sender: UIButton) {
-  }
-  
-  @objc private func openInstagram(_ sender: UIButton) {
-  }
-  
-  @objc private func openFacebook(_ sender: UIButton) {
-  }
-  
   @IBAction func showMenu(_ sender: UIBarButtonItem) {
     UIView.animate(withDuration: 0.3) {
       self.leadingSlideViewConstraint.constant = -250
@@ -66,6 +60,19 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
     NavigationBarHelper().setupView(for: navigationBar)
     setupBackgroundView()
     setupSlideMenuView(with: slideMenu)
+    setSocialMediaGestures()
+  }
+  
+  private func setSocialMediaGestures() {
+    youtubeImageView.isUserInteractionEnabled = true
+    instagramImageView.isUserInteractionEnabled = true
+    facebookImageView.isUserInteractionEnabled = true
+    let youtubeTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openYoutube))
+    let instagramTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openInstagram))
+    let facebookTapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(openFacebook))
+    youtubeImageView.addGestureRecognizer(youtubeTapGesture)
+    instagramImageView.addGestureRecognizer(instagramTapGesture)
+    facebookImageView.addGestureRecognizer(facebookTapGesture)
   }
   
   private func setupBackgroundView() {
@@ -92,6 +99,23 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
     slideMenuViewController.view.topAnchor.constraint(equalTo: slideMenuContainer.safeAreaLayoutGuide.topAnchor).isActive = true
     
     slideMenuViewController.didMove(toParent: self)
+  }
+  
+  @objc private func openYoutube() {
+    guard let youtubeURL: URL = URL(string: constants.youtubeURL) else { return }
+    if UIApplication.shared.canOpenURL(youtubeURL) {
+        UIApplication.shared.open(youtubeURL, options: [:])
+    }
+  }
+  
+  @objc private func openInstagram() {
+    guard let instagramURL: URL = URL(string: constants.instagramURL) else { return }
+        UIApplication.shared.open(instagramURL)
+  }
+  
+  @objc private func openFacebook() {
+    guard let facebookURL: URL = URL(string: constants.facebookURL) else { return }
+        UIApplication.shared.open(facebookURL)
   }
 }
 

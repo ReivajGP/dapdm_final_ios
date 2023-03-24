@@ -11,9 +11,12 @@ import UIKit
 struct AppConstants {
   // MARK: - URL's
   var baseUrl: String { "https://private-5acf0e-feedbapp.apiary-mock.com" }
-  var calendarEndpoint = "/events"
-  var ticketsEndpoint = "/tickets"
-  var commentsEndpoint = "/comments"
+  var calendarEndpoint: String { "/events" }
+  var ticketsEndpoint: String { "/tickets" }
+  var commentsEndpoint: String { "/comments" }
+  var facebookURL: String { "https://www.facebook.com/feedback.cdmx/" }
+  var instagramURL: String { "https://www.instagram.com/feedback_rock/" }
+  var youtubeURL: String { "https://www.youtube.com/@feedbackmxoldies7833" }
   
   // MARK: Contract screen
   var newContractCardCornerRadius: CGFloat { 10.0 }
