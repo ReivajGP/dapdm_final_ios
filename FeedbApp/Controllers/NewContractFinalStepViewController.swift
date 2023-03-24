@@ -32,6 +32,7 @@ final class NewContractFinalStepViewController: UIViewController {
       dismiss(animated: true)
     }
   }
+  
   // MARK: - Private methods
   private func setupView() {
     setupTextView()

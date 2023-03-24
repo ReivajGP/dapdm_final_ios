@@ -25,7 +25,8 @@ struct AppConstants {
   var expiredTicketImageName: String { "ticket_expired" }
   var okTicketImageName: String { "ticket_ok" }
   var ticketCellNib: String { "TicketTableViewCell" }
-  var segueContractFlow: String { "contract_flow" }
+  var segueContractFlow: String { "to_contract_flow" }
+  var segueTicketSummary: String { "to_ticket_summary" }
   var newContractOneToSecondStepSegue: String { "new_contract_one_to_two" }
   var newContractSecondToThirdStepSegue: String { "new_contract_two_to_three" }
   var newContractThirdToFourthStepSegue: String { "new_contract_three_to_four" }

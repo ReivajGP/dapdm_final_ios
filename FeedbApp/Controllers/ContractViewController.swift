@@ -13,7 +13,8 @@ final class ContractViewController: UIViewController {
   // MARK: - Properties
   private let constants: AppConstants = AppConstants()
   private var tickets: [TicketItem] = []
-  
+  private var ticketToShow: Int?
+
   // MARK: - IBOutlets
   @IBOutlet private weak var newContractView: UIView!
   @IBOutlet private weak var ticketsTableView: UITableView!
@@ -32,6 +33,13 @@ final class ContractViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     if tickets.isEmpty {
       loadUserTickets()
+    }
+  }
+  
+  // MARK: - Overrided methods
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.destination is TicketSummaryViewController {
+      (segue.destination as! TicketSummaryViewController).ticketToShow = tickets[ticketToShow ?? .zero]
     }
   }
   
@@ -101,12 +109,23 @@ final class ContractViewController: UIViewController {
       }
   }
   
+  private func goToTicketSummary() {
+//    let toTicketSummarySegue: UIStoryboardSegue = UIStoryboardSegue(
+//      identifier: constants.segueTicketSummary,
+//      source: self,
+//      destination: TicketSummaryViewController()
+//    )
+//    prepare(for: toTicketSummarySegue, sender: self)
+    performSegue(withIdentifier: constants.segueTicketSummary, sender: self)
+  }
+  
   @objc private func goToNewContractFlow() {
     performSegue(withIdentifier: constants.segueContractFlow, sender: self)
   }
   
   // MARK: - IBAction methods
   @IBAction func showMenu(_ sender: UIBarButtonItem) {
+    performSegue(withIdentifier: constants.segueTicketSummary, sender: self)
   }
 }
 
@@ -133,5 +152,7 @@ extension ContractViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     tableView.deselectRow(at: indexPath, animated: true)
+    ticketToShow = indexPath.row
+    goToTicketSummary()
   }
 }
