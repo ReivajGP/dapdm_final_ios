@@ -68,7 +68,7 @@ final class ContractViewController: UIViewController {
             self.ticketsTableView.reloadData()
           }
         } else {
-          // TODO: Mostrar alerta de que hubo un error al traer los tickets
+          AlertHelper().showServiceUnavailableAlert(in: self)
         }
       }).resume()
     } else {

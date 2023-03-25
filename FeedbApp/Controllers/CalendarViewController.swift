@@ -42,10 +42,10 @@ final class CalendarViewController: UIViewController {
             self.events = try JSONDecoder().decode([CalendarItem].self, from: calendarData)
             self.imageDownloaderHelper.downloadImages(for: self.events)
           } catch {
-            // TODO: error al hacer petición
+            AlertHelper().showServiceUnavailableAlert(in: self)
           }
         } else {
-          // TODO: añerta
+          AlertHelper().showServiceUnavailableAlert(in: self)
         }
       }.resume()
     } else {

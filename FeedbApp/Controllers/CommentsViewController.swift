@@ -75,6 +75,8 @@ final class CommentsViewController: UIViewController {
             DispatchQueue.main.async {
               self.showCommentsSentSuccessfullyAlert()
             }
+          } else {
+            AlertHelper().showServiceUnavailableAlert(in: self)
           }
         }.resume()
       } else {

@@ -66,6 +66,7 @@ struct AppConstants {
   var commentsSentSuccessfullyAlertMessage: String { "Tus comentarios han sido enviados con éxito. ¡Gracias por compartirnos tu experiencia!" }
   var noInternetConnectionAlertTitle: String { "Sin conexión" }
   var noInternetConnectionAlertMessage: String { "Revisa que tengas una conexión activa a Internet para poder acceder a este contenido" }
+  var serviceUnavailableAlertMessage: String { "Ocurrió un problema al realizar la petición al servidor. Intenta más tarde." }
   
   // MARK: - Calendar
   var calendarCellReusableID: String { "calendarCellReusableID" }

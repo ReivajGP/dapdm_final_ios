@@ -37,4 +37,15 @@ final class AlertHelper {
     alert.addAction(alertAction)
     viewController.present(alert, animated: true)
   }
+  
+  func showServiceUnavailableAlert(in viewController: UIViewController) {
+    let alert: UIAlertController = UIAlertController(
+      title: AppConstants().genericIssueAlertTitle,
+      message: AppConstants().serviceUnavailableAlertMessage,
+      preferredStyle: .alert
+    )
+    let alertAction: UIAlertAction = UIAlertAction(title: AppConstants().genericOkActionTitle, style: .default) { _ in }
+    alert.addAction(alertAction)
+    viewController.present(alert, animated: true)
+  }
 }
