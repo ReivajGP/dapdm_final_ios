@@ -15,6 +15,7 @@ final class CalendarViewController: UIViewController {
   private var eventsImagesData: [Data] = []
   private let constants: AppConstants = AppConstants()
   private let imageDownloaderHelper: ImageDownloaderHelper = ImageDownloaderHelper()
+  private let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
   
   // MARK: - IBOutlets
   @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
@@ -30,22 +31,26 @@ final class CalendarViewController: UIViewController {
   
   // MARK: - Private methods
   private func requestCalendarEvents() {
-    activityIndicator.startAnimating()
-    guard let calendarURL: URL = URL(string: constants.baseUrl + constants.calendarEndpoint) else { return }
-    URLSession.shared.dataTask(with: URLRequest(url: calendarURL)) { calendarData, _, error in
-      self.stopActivityIndicator()
-      if error == nil {
-        guard let calendarData else { return }
-        do {
-          self.events = try JSONDecoder().decode([CalendarItem].self, from: calendarData)
-          self.imageDownloaderHelper.downloadImages(for: self.events)
-        } catch {
-          //TODO: Mandar alerta de error al consultar el calendario
+    if appDelegate.isThereInternetConnection {
+      activityIndicator.startAnimating()
+      guard let calendarURL: URL = URL(string: constants.baseUrl + constants.calendarEndpoint) else { return }
+      URLSession.shared.dataTask(with: URLRequest(url: calendarURL)) { calendarData, _, error in
+        self.stopActivityIndicator()
+        if error == nil {
+          guard let calendarData else { return }
+          do {
+            self.events = try JSONDecoder().decode([CalendarItem].self, from: calendarData)
+            self.imageDownloaderHelper.downloadImages(for: self.events)
+          } catch {
+            // TODO: error al hacer petición
+          }
+        } else {
+          // TODO: añerta
         }
-      } else {
-        //TODO: Mandar alerta de error al consultar el calendario
-      }
-    }.resume()
+      }.resume()
+    } else {
+      AlertHelper().showNoInternetConnectionAlert(in: self)
+    }
   }
   
   private func stopActivityIndicator() {
@@ -62,10 +67,6 @@ final class CalendarViewController: UIViewController {
     cell.eventTitle.text = events[indexPath.row].title
     cell.eventDescription.text = events[indexPath.row].description
     cell.eventSchedule.text = events[indexPath.row].schedule
-  }
-  
-  
-  @IBAction func showMenu(_ sender: UIBarButtonItem) {
   }
 }
 

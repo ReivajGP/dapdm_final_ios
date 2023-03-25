@@ -8,7 +8,8 @@
 import UIKit
 
 protocol SlideMenuViewControllerDelegate {
-  func hideSlideMenu()
+  func showIntroductionScreen()
+  func showCommentsScreen()
 }
 
 final class SlideMenuViewController: UIViewController {
@@ -18,20 +19,14 @@ final class SlideMenuViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupSlideMenuView()
-  }
-  
-  // MARK: - Private methods
-  private func setupSlideMenuView() {
-    
   }
   
   // MARK: - IBAction methods
   @IBAction func showIntroductionScreen(_ sender: UIButton) {
-    delegate?.hideSlideMenu()
+    delegate?.showIntroductionScreen()
   }
   
   @IBAction func showCommentsScreen(_ sender: UIButton) {
-    delegate?.hideSlideMenu()
+    delegate?.showCommentsScreen()
   }
 }

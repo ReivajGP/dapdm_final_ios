@@ -51,7 +51,7 @@ final class TicketSummaryViewController: UIViewController {
     if let additionalComments: String = ticketToShow.additionalComments {
       detailsLabel.text = additionalComments
     } else {
-      detailsLabel.text = "(Sin notas adicionales)"
+      detailsLabel.text = constants.noAdditionalCommentsString
     }
   }
   

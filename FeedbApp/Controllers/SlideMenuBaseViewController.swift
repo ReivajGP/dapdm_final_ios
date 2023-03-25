@@ -27,21 +27,4 @@ final class SlideMenuBaseViewController: UIViewController {
     menuBackgroundView.isHidden = false
     leadingSlideViewConstraint.constant = 0
   }
-  
-  // MARK: - Overrided methods
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "toSlideMenu" {
-      if let slideMenuController: SlideMenuViewController = segue.destination as? SlideMenuViewController {
-        self.slideMenuViewController = slideMenuController
-        self.slideMenuViewController?.delegate = self
-      }
-    }
-  }
-}
-
-extension SlideMenuBaseViewController: SlideMenuViewControllerDelegate {
-  func hideSlideMenu() {
-    leadingSlideViewConstraint.constant = -250
-    menuBackgroundView.isHidden = true
-  }
 }

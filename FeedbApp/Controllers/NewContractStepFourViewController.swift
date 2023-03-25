@@ -14,6 +14,7 @@ final class NewContractStepFourViewController: UIViewController, MKMapViewDelega
   var fourthStepTicket: TicketItem = TicketItem()
   private let constants: AppConstants = AppConstants()
   private var eventCoordinates: CLLocationCoordinate2D = CLLocationCoordinate2D()
+  private let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
   
   // MARK: - IBOutlets
   @IBOutlet weak var mapView: MKMapView!
@@ -79,13 +80,17 @@ final class NewContractStepFourViewController: UIViewController, MKMapViewDelega
   }
   
   private func goToFinalStep() {
-    let toFinalStepSegue: UIStoryboardSegue = UIStoryboardSegue(
-      identifier: constants.newContractToFinalStepSegue,
-      source: self,
-      destination: NewContractFinalStepViewController()
-    )
-    prepare(for: toFinalStepSegue, sender: self)
-    performSegue(withIdentifier: constants.newContractToFinalStepSegue, sender: self)
+    if appDelegate.isThereInternetConnection {
+      let toFinalStepSegue: UIStoryboardSegue = UIStoryboardSegue(
+        identifier: constants.newContractToFinalStepSegue,
+        source: self,
+        destination: NewContractFinalStepViewController()
+      )
+      prepare(for: toFinalStepSegue, sender: self)
+      performSegue(withIdentifier: constants.newContractToFinalStepSegue, sender: self)
+    } else {
+      AlertHelper().showNoInternetConnectionAlert(in: self)
+    }
   }
 }
 

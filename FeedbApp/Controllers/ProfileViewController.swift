@@ -12,6 +12,7 @@ final class ProfileViewController: UIViewController {
   
   // MARK: - Properties
   private let constants: AppConstants = AppConstants()
+  private let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
   
   // MARK: - IBOutlets
   @IBOutlet private weak var mailTextField: UITextField!
@@ -132,22 +133,26 @@ final class ProfileViewController: UIViewController {
   // MARK: - IBaction methods
   @IBAction func logIn(_ sender: UIButton) {
     if areFieldsEntriesFilled() {
-      guard let email: String = mailTextField.text,
-            let password: String = passTextField.text else { return }
-      showActivityIndicator()
-      Auth.auth().signIn(withEmail: email, password: password) { result, error in
-        guard let _ = result,
-              error == nil else {
-          if let error {
-            self.showIssueLogingInAlert(message: error.localizedDescription)
-            self.stopActivityIndicator()
+      if appDelegate.isThereInternetConnection {
+        guard let email: String = mailTextField.text,
+              let password: String = passTextField.text else { return }
+        showActivityIndicator()
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+          guard let _ = result,
+                error == nil else {
+            if let error {
+              self.showIssueLogingInAlert(message: error.localizedDescription)
+              self.stopActivityIndicator()
+            }
+            return
           }
-          return
+          self.showSuccessfulLogInAlert()
+          self.stopActivityIndicator()
         }
-        self.showSuccessfulLogInAlert()
-        self.stopActivityIndicator()
+      } else {
+        AlertHelper().showNoInternetConnectionAlert(in: self)
       }
-    } else {
+    }else {
       showEmptyFieldsAlert()
     }
   }
@@ -155,20 +160,24 @@ final class ProfileViewController: UIViewController {
   
   @IBAction func signIn(_ sender: UIButton) {
     if areFieldsEntriesFilled() {
-      guard let email: String = mailTextField.text,
-            let password: String = passTextField.text else { return }
-      showActivityIndicator()
-      Auth.auth().createUser(withEmail: email, password: password) { result, error in
-        guard let _ = result,
-              error == nil else {
-          if let error {
-            self.showIssueSigningInAlert(message: error.localizedDescription)
-            self.stopActivityIndicator()
+      if appDelegate.isThereInternetConnection {
+        guard let email: String = mailTextField.text,
+              let password: String = passTextField.text else { return }
+        showActivityIndicator()
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
+          guard let _ = result,
+                error == nil else {
+            if let error {
+              self.showIssueSigningInAlert(message: error.localizedDescription)
+              self.stopActivityIndicator()
+            }
+            return
           }
-          return
+          self.showSuccessfulSignInAlert()
+          self.stopActivityIndicator()
         }
-        self.showSuccessfulSignInAlert()
-        self.stopActivityIndicator()
+      } else {
+        AlertHelper().showNoInternetConnectionAlert(in: self)
       }
     } else {
       showEmptyFieldsAlert()
@@ -177,15 +186,19 @@ final class ProfileViewController: UIViewController {
   
   @IBAction func recoverPassword(_ sender: UIButton) {
     if (mailTextField.text?.count != .zero) {
-      guard let mail: String = mailTextField.text else { return }
-      showActivityIndicator()
-      Auth.auth().sendPasswordReset(withEmail: mail) { error in
-        self.stopActivityIndicator()
-        if let error {
-          self.showIssueRecoveringPasswordAlert(message: error.localizedDescription)
-        } else {
-          self.successfullySentPassRecoveryMailAlert()
+      if appDelegate.isThereInternetConnection {
+        guard let mail: String = mailTextField.text else { return }
+        showActivityIndicator()
+        Auth.auth().sendPasswordReset(withEmail: mail) { error in
+          self.stopActivityIndicator()
+          if let error {
+            self.showIssueRecoveringPasswordAlert(message: error.localizedDescription)
+          } else {
+            self.successfullySentPassRecoveryMailAlert()
+          }
         }
+      } else {
+        AlertHelper().showNoInternetConnectionAlert(in: self)
       }
     } else {
       showIntroduceEmailAlert()
@@ -197,9 +210,5 @@ final class ProfileViewController: UIViewController {
       try Auth.auth().signOut()
       successfullyLogedOutAlert()
     } catch { }
-  }
-  
-  
-  @IBAction func showSlideMenu(_ sender: UIBarButtonItem) {
   }
 }

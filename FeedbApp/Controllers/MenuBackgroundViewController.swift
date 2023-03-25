@@ -11,8 +11,6 @@ final class MenuBackgroundViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    
   }
   
 }

@@ -41,10 +41,10 @@ final class NewContractFinalStepViewController: UIViewController {
   
   private func setupTextView() {
     let textViewStyle = NSMutableParagraphStyle()
-    textViewStyle.lineSpacing = -5
+    textViewStyle.lineSpacing = constants.newContractFinalStepTextLineSpacing
     textViewStyle.alignment = .center
     let attributes = [NSAttributedString.Key.paragraphStyle : textViewStyle,
-                      NSAttributedString.Key.font: UIFont(name: "Hiragino Sans", size: 18.0) ?? UIFont()]
+                      NSAttributedString.Key.font: UIFont(name: constants.fontHiraginoSansName, size: constants.newContractFinalStepTextSize) ?? UIFont()]
     nextStepsTextView.attributedText = NSAttributedString(
       string: constants.newContractNextStepInstructions,
       attributes: attributes

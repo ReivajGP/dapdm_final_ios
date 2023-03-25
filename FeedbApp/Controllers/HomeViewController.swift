@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  FeedbApp
 //
 //  Created by Reivaj Gomez on 15/03/23.
@@ -12,11 +12,12 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
   // MARK: - Properties
   private let constants: AppConstants = AppConstants()
   private var backgroundView: UIView = UIView()
+  private var appDelegate = UIApplication.shared.delegate as! AppDelegate
   private lazy var slideMenu: SlideMenuViewController = {
-    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+    let storyboard = UIStoryboard(name: constants.mainStoryboardName, bundle: Bundle.main)
     
-    guard let slideMenu: SlideMenuViewController = storyboard.instantiateViewController(withIdentifier: "SlideMenuViewController") as? SlideMenuViewController else {
-      fatalError("Unable to Instantiate Summary View Controller")
+    guard let slideMenu: SlideMenuViewController = storyboard.instantiateViewController(withIdentifier: constants.slideMenuViewControllerId) as? SlideMenuViewController else {
+      fatalError(constants.unableInstantiateSlideMenuMessage)
     }
     
     self.setupSlideMenuView(with: slideMenu)
@@ -41,12 +42,12 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
   
   // MARK: - IBAction methods
   @IBAction func showMenu(_ sender: UIBarButtonItem) {
-    UIView.animate(withDuration: 0.3) {
-      self.leadingSlideViewConstraint.constant = -250
+    UIView.animate(withDuration: constants.slideMenuAnimationLenght) {
+      self.leadingSlideViewConstraint.constant = -self.constants.slideMenuWidth
       self.view.layoutIfNeeded()
     } completion: { status in
-      UIView.animate(withDuration: 0.3) {
-        self.leadingSlideViewConstraint.constant = 0
+      UIView.animate(withDuration: self.constants.slideMenuAnimationLenght) {
+        self.leadingSlideViewConstraint.constant = .zero
         self.view.layoutIfNeeded()
       } completion: { status in
         self.backgroundView.isHidden = false
@@ -83,12 +84,12 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
     backgroundView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
     backgroundView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     
-    backgroundView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
+    backgroundView.backgroundColor = UIColor(red: .zero, green: .zero, blue: .zero, alpha: constants.slideMenuBackgroundViewAlpha)
     backgroundView.isHidden = true
   }
   
   private func setupSlideMenuView(with slideMenuViewController: UIViewController) {
-    leadingSlideViewConstraint.constant = -250
+    leadingSlideViewConstraint.constant = -constants.slideMenuWidth
     addChild(slideMenuViewController)
     slideMenuContainer.addSubview(slideMenuViewController.view)
     
@@ -101,37 +102,59 @@ final class HomeViewController: UIViewController, UINavigationBarDelegate {
     slideMenuViewController.didMove(toParent: self)
   }
   
-  @objc private func openYoutube() {
-    guard let youtubeURL: URL = URL(string: constants.youtubeURL) else { return }
-    if UIApplication.shared.canOpenURL(youtubeURL) {
-        UIApplication.shared.open(youtubeURL, options: [:])
-    }
-  }
-  
-  @objc private func openInstagram() {
-    guard let instagramURL: URL = URL(string: constants.instagramURL) else { return }
-        UIApplication.shared.open(instagramURL)
-  }
-  
-  @objc private func openFacebook() {
-    guard let facebookURL: URL = URL(string: constants.facebookURL) else { return }
-        UIApplication.shared.open(facebookURL)
-  }
-}
-
-extension HomeViewController: SlideMenuViewControllerDelegate {
-  func hideSlideMenu() {
-    UIView.animate(withDuration: 0.3) {
-      self.leadingSlideViewConstraint.constant = 0
+  private func hideSlideMenu() {
+    UIView.animate(withDuration: constants.slideMenuAnimationLenght) {
+      self.leadingSlideViewConstraint.constant = .zero
       self.view.layoutIfNeeded()
     } completion: { status in
-      UIView.animate(withDuration: 0.3) {
-        self.leadingSlideViewConstraint.constant = -250
+      UIView.animate(withDuration: self.constants.slideMenuAnimationLenght) {
+        self.leadingSlideViewConstraint.constant = -self.constants.slideMenuWidth
         self.view.layoutIfNeeded()
       } completion: { status in
         self.backgroundView.isHidden = true
       }
     }
+  }
+  
+  @objc private func openYoutube() {
+    if appDelegate.isThereInternetConnection {
+      guard let youtubeURL: URL = URL(string: constants.youtubeURL) else { return }
+      if UIApplication.shared.canOpenURL(youtubeURL) {
+        UIApplication.shared.open(youtubeURL, options: [:])
+      }
+    } else {
+      AlertHelper().showNoInternetConnectionAlert(in: self)
+    }
+  }
+  
+  @objc private func openInstagram() {
+    if appDelegate.isThereInternetConnection {
+      guard let instagramURL: URL = URL(string: constants.instagramURL) else { return }
+      UIApplication.shared.open(instagramURL)
+    } else {
+      AlertHelper().showNoInternetConnectionAlert(in: self)
+    }
+  }
+  
+  @objc private func openFacebook() {
+    if appDelegate.isThereInternetConnection {
+      guard let facebookURL: URL = URL(string: constants.facebookURL) else { return }
+      UIApplication.shared.open(facebookURL)
+    } else {
+      AlertHelper().showNoInternetConnectionAlert(in: self)
+    }
+  }
+}
+
+extension HomeViewController: SlideMenuViewControllerDelegate {
+  func showIntroductionScreen() {
+    hideSlideMenu()
+    performSegue(withIdentifier: constants.toIntroductionScreenSegue, sender: self)
+  }
+  
+  func showCommentsScreen() {
+    hideSlideMenu()
+    performSegue(withIdentifier: constants.toCommentsScreenSegue, sender: self)
   }
 }
 

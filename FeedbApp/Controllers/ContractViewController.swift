@@ -110,22 +110,11 @@ final class ContractViewController: UIViewController {
   }
   
   private func goToTicketSummary() {
-//    let toTicketSummarySegue: UIStoryboardSegue = UIStoryboardSegue(
-//      identifier: constants.segueTicketSummary,
-//      source: self,
-//      destination: TicketSummaryViewController()
-//    )
-//    prepare(for: toTicketSummarySegue, sender: self)
     performSegue(withIdentifier: constants.segueTicketSummary, sender: self)
   }
   
   @objc private func goToNewContractFlow() {
     performSegue(withIdentifier: constants.segueContractFlow, sender: self)
-  }
-  
-  // MARK: - IBAction methods
-  @IBAction func showMenu(_ sender: UIBarButtonItem) {
-    performSegue(withIdentifier: constants.segueTicketSummary, sender: self)
   }
 }
 

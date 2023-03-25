@@ -18,7 +18,17 @@ struct AppConstants {
   var instagramURL: String { "https://www.instagram.com/feedback_rock/" }
   var youtubeURL: String { "https://www.youtube.com/@feedbackmxoldies7833" }
   
-  // MARK: Contract screen
+  // MARK: - Home screen
+  var toIntroductionScreenSegue: String{ "toIntroductionScreen" }
+  var toCommentsScreenSegue: String { "toCommentsScreen" }
+  var slideMenuWidth: CGFloat { 250.0 }
+  var slideMenuBackgroundViewAlpha: CGFloat { 0.3 }
+  var slideMenuAnimationLenght: Double { 0.3 }
+  var slideMenuViewControllerId: String { "SlideMenuViewController" }
+  var mainStoryboardName: String { "Main" }
+  var unableInstantiateSlideMenuMessage: String { "Unable to Instantiate Summary View Controller" }
+  
+  // MARK: - Contract screen
   var newContractCardCornerRadius: CGFloat { 10.0 }
   var newContractCardShadowColor: CGColor { UIColor.black.cgColor }
   var newContractCardShadowOpacity: Float { 0.3 }
@@ -34,6 +44,8 @@ struct AppConstants {
   var newContractSecondToThirdStepSegue: String { "new_contract_two_to_three" }
   var newContractThirdToFourthStepSegue: String { "new_contract_three_to_four" }
   var newContractToFinalStepSegue: String { "new_contract_to_final" }
+  var newContractFinalStepTextSize: CGFloat { 18.0 }
+  var newContractFinalStepTextLineSpacing: CGFloat {-5 }
   
   // MARK: - Alerts
   var genericIssueAlertTitle: String { "¡Oops!" }
@@ -51,6 +63,9 @@ struct AppConstants {
   var LogInActionTitle: String { "Iniciar sesión" }
   var unableLoadContentUnlessLogedInAlertMessage: String { "Para poder acceder al contenido completo de este apartado debes iniciar sesión." }
   var successfullyLogedOutAlertMessage: String { "Sesión cerrada exitosamente" }
+  var commentsSentSuccessfullyAlertMessage: String { "Tus comentarios han sido enviados con éxito. ¡Gracias por compartirnos tu experiencia!" }
+  var noInternetConnectionAlertTitle: String { "Sin conexión" }
+  var noInternetConnectionAlertMessage: String { "Revisa que tengas una conexión activa a Internet para poder acceder a este contenido" }
   
   // MARK: - Calendar
   var calendarCellReusableID: String { "calendarCellReusableID" }
@@ -99,6 +114,8 @@ struct AppConstants {
   var defaultAnimationSpeed: CGFloat { 1.0 }
   var contractsTabBarControllerIndex: Int { 2 }
   var profileTabBarControllerIndex: Int { 3 }
+  var noAdditionalCommentsString: String { "(Sin notas adicionales)"}
+  var fontHiraginoSansName: String { "Hiragino Sans" }
   
   // MARK: - Long strings
   var newContractNextStepInstructions: String {

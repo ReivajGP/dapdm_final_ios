@@ -26,4 +26,15 @@ final class AlertHelper {
     }
     controller.present(alert, animated: true)
   }
+  
+  func showNoInternetConnectionAlert(in viewController: UIViewController) {
+    let alert: UIAlertController = UIAlertController(
+      title: AppConstants().noInternetConnectionAlertTitle,
+      message: AppConstants().noInternetConnectionAlertMessage,
+      preferredStyle: .alert
+    )
+    let alertAction: UIAlertAction = UIAlertAction(title: AppConstants().genericOkActionTitle, style: .default) { _ in }
+    alert.addAction(alertAction)
+    viewController.present(alert, animated: true)
+  }
 }
